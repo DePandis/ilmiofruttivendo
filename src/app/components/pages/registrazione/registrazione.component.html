@@ -1,0 +1,82 @@
+<form (submit)="validaRegistrazione($event); salvaRegistrazione">
+    <div class="container">
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4">
+                <div class="text-center mb-3 p-5">
+                    <p>Iscriviti con:</p>
+                    <a href="https://it-it.facebook.com/" class="me-4"><fa-icon [icon]="faFacebookF"></fa-icon></a>
+                    <a href="https://www.google.com/intl/it/account/about/"><fa-icon [icon]="faGoogle"></fa-icon></a>
+                    <a href="https://twitter.com/i/flow/login?redirect_after_login=%2F%3Flang%3Dit"
+                        class="ms-4"><fa-icon [icon]="faTwitter"></fa-icon></a>
+                </div>
+                <p class="text-center">O:</p>
+            </div>
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-4">
+                    <div class="form-outline mb-4">
+                        <input type="text" id="registerName" class="form-control" placeholder="Nome e Cognome" required>
+                        <div class="invalid-feedback">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Il tuo Nome e Cognome sono richiesti.</font>
+                            </font>
+                        </div>
+                    </div>
+                    <div class="form-outline mb-4">
+                        <input type="text" id="registerUsername" class="form-control" placeholder="Username" required>
+                        <div class="invalid-feedback">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">La tua Username deve essere lunga 6-11 caratteri,
+                                    contenere lettere e numeri e non deve contenere spazi, caratteri speciali o emoji.
+                                </font>
+                            </font>
+                        </div>
+                    </div>
+                    <div class="form-outline mb-4">
+                        <input type="email" id="registerEmail" class="form-control" placeholder="Email" required
+                            minlength="25">
+                        <div class="invalid-feedback">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Inserisci un indirizzo email valido.</font>
+                            </font>
+                        </div>
+                    </div>
+                    <div class="form-outline mb-4">
+                        <input type="password" id="registerPassword" class="form-control" placeholder="Password"
+                            required>
+                        <div class="invalid-feedback">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">La tua password deve essere lunga 8-20 caratteri,
+                                    contenere lettere e numeri e non deve contenere spazi, caratteri speciali o emoji.
+                                </font>
+                            </font>
+                        </div>
+                    </div>
+                    <div class="form-outline mb-4">
+                        <input type="password" id="registerRepeatPassword" class="form-control"
+                            placeholder="Ripeti Password" required>
+                        <div class="invalid-feedback">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">Ripeti correttamente la Password scelta.</font>
+                            </font>
+                        </div>
+                    </div>
+                    <div class="form-check d-flex justify-content-center mb-4">
+                        <input class="form-check-input me-2" type="checkbox" value="" id="registerCheck" checked
+                            aria-describedby="registerCheckHelpText">
+                        <label class="form-check-label" for="registerCheck">
+                            Ho letto e accetto i termini
+                        </label>
+                    </div>
+                    <button class="btn btn-success" type="submit">Registrati</button>
+                </div>
+                <p></p>
+                <div class="alert alert-success text-center" *ngIf="showAlert">
+                    Nuova password impostata con successo!
+                    <p></p> Clicca su Accedi, Loggati ed inizia la tua Esperienza Con Noi!
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

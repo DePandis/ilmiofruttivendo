@@ -1,0 +1,86 @@
+<section>
+    <img src="assets/media/images/1000_F_596954459_eQAmZ9c7YW3Q6KgbCLAV1SC0PStHNt6O.jpg" alt="Carrello"
+        style="float: right; margin-top: 250px; margin-right: 30px;" mar height="340">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5 col-lg-6 order-md-last p-5">
+                <h4 class="d-flex justify-content-between align-item-center mb-3">
+                    <span class="text-success">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Il Tuo Carrello</font>
+                        </font>
+                    </span>
+                    <span class="badge bg-success rounded-pill">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">{{ datiOrdine.products ? datiOrdine.products.length :
+                                0 }}</font>
+                        </font>
+                    </span>
+                </h4>
+                <ul class="list-group mb-3">
+                    <li class="list-group-item d-flex justify-content-between lh-sm"
+                        *ngFor="let prodotto of datiOrdine.products">
+                        <div>
+                            <h6 class="my-0">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">{{ prodotto.title}}</font>
+                                </font>
+                            </h6>
+                            <small class="text-body-secondary">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Kg {{ prodotto.kg }}</font>
+                                </font>
+                            </small>
+                        </div>
+                        <span class="text-body-secondary">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">€ {{ prodotto.prezzoTotale}}</font>
+                            </font>
+                        </span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between bg-body-tertiary">
+                        <div class="text-success">
+                            <h6 class="my-0">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">IVA</font>
+                                </font>
+                            </h6>
+                            <small>
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">(Prodotti agricoli 4%)</font>
+                                </font>
+                            </small>
+                        </div>
+                        <span class="text-success">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">€ {{ datiOrdine.iva }}</font>
+                            </font>
+                        </span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between">
+                        <span>
+                            <h5 class="my-0">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Totale Ordine</font>
+                                </font>
+                            </h5>
+                            <small>
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">(IVA inclusa)</font>
+                                </font>
+                            </small>
+                        </span>
+                        <strong>
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">€ {{ datiOrdine.totale }}</font>
+                            </font>
+                        </strong>
+                    </li>
+                    <hr class="my-3">
+                    <a class="dropdown-item" (click)="onpagamentoClick()"
+                        class="btn btn-success btn-lg text-white">Procedi e Paga</a>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

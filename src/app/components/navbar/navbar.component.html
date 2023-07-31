@@ -1,0 +1,88 @@
+<div container-fluid class="bg-success p-2 text-white">
+    <div class="row text-center">
+        <div class="col-3">
+            <img width="170" height="100" src="assets/media/images/Banner.jpg" alt="Healthy">
+        </div>
+        <div class="col-3">
+            <img width="170" height="100" src="assets/media/images/Salute.jpg" alt="Salute">
+        </div>
+        <div class="col-3">
+            <img width="170" height="100" src="assets/media/images/Banner 3.png" alt="Ordina">
+        </div>
+        <div class="col-3">
+            <img width="170" height="100" src="assets/media/images/Banner 2.jpg" alt="Consegna a domicilio">
+        </div>
+    </div>
+</div>
+<header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" routerLink="/">
+                <img src="assets/media/images/Logo Sito 2.png" alt="Logo" width="150"
+                    class="d-inline-block align-text-top">
+            </a>
+            <div class="collapse navbar-collapse" id="Schede">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a (click)="onfruttaClick()" class="nav-link" [ngClass]="isLogged? '' : 'disabled'">Frutta</a>
+                    </li>
+                    <li class="nav-item">
+                        <a (click)="onverduraClick()" class="nav-link" [ngClass]="isLogged? '' : 'disabled'">Verdura</a>
+                    </li>
+                    <li class="nav-item">
+                        <a (click)="onortaggiClick()" class="nav-link" [ngClass]="isLogged? '' : 'disabled'">Ortaggi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a (click)="oncarrelloClick()" class="nav-link"
+                            [ngClass]="isLogged? '' : 'disabled'">Carrello</a>
+                    </li>
+                </ul>
+                <div class="text-center p-3">
+                    <a href="https://api.whatsapp.com/send?phone=3496754010&text=Salve%20vorrei%20inviare%20un%20messaggio%20"
+                        *ngIf="isLogged" class="btn btn-success me-4 justify-content-center">Ordina Ora con WhatsApp!</a>
+                </div>
+                <form class="col-12 col-lg-auto mb-0 me-lg-2" role="search">
+                    <input (keydown)="onKeydown($event)" type="search" class="form-control form-control text-bg"
+                        placeholder="Ricerca Fruttivendolo" aria-label="Ricerca Fruttivendolo">
+                </form>
+                <div class="text-end" *ngIf="!isLogged">
+                    <a class="dropdown-item" (click)="onaccessoClick()" class="btn btn-warning me-2">Accedi</a>
+                    <a class="dropdown-item" (click)="onregistratiClick()" class="btn btn-warning me-2"> Registrati</a>
+                </div>
+            </div>
+        </div>
+        <div class="dropdown text-end" style="margin-right: 110px;">
+            <a href="#" *ngIf="isLogged" class="d-inline-block link-body-emphasis text-decoration-none dropdown-toggle"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="assets/media/images/immagine-del-profilo-utente-di-sesso-maschile_318-37825.jpg" alt="Cliente"
+                    width="38" height="38" class="rounded-circle">
+            </a>
+            <ul class="dropdown-menu text-small" id="dropdown-profilo-utente">
+                <li>
+                    <a (click)="onstoricoordiniClick()">
+                        <font style="margin-left: 15px; vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Storico Ordini...</font>
+                        </font>
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdown-item" (click)="onprofiloutenteClick()">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Profilo...</font>
+                        </font>
+                    </a>
+                </li>
+                <li>
+                    <hr class="dropdown-divider">
+                </li>
+                <li>
+                    <a class="dropdown-item" (click)="ondisconnessioneClick()">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Disconnessione...</font>
+                        </font>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>

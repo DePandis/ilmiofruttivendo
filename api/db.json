@@ -1,0 +1,270 @@
+{
+    "products": [
+        {
+            "id": "fruit",
+            "products": [
+                {
+                    "title": "Mele Gialle",
+                    "price": 0.80,
+                    "minimumOrderQuantity": 0.5
+                },
+                {
+                    "title": "Mele Rosse",
+                    "price": 0.90,
+                    "minimumOrderQuantity": 0.5
+                },
+                {
+                    "title": "Mele Verdi",
+                    "price": 1.00,
+                    "minimumOrderQuantity": 0.5
+                },
+                {
+                    "title": "Banane",
+                    "price": 1.10,
+                    "minimumOrderQuantity": 0.5
+                },
+                {
+                    "title": "Kiwi",
+                    "price": "€ 1,50",
+                    "minimumOrderQuantity": 0.5
+                },
+                {
+                    "title": "Fragole",
+                    "price": 2.00,
+                    "minimumOrderQuantity": 0.5
+                },
+                {
+                    "title": "Pere",
+                    "price": 0.90,
+                    "minimumOrderQuantity": 0.5
+                }
+            ]
+        },
+        {
+            "id": "vegetables",
+            "products": [
+                {
+                    "title": "Broccoli",
+                    "price": 1.50,
+                    "minimumOrderQuantity": 0.5
+                },
+                {
+                    "title": "Biete",
+                    "price": 1.10,
+                    "minimumOrderQuantity": 0.5
+                },
+                {
+                    "title": "Spinaci",
+                    "price": 1.25,
+                    "minimumOrderQuantity": 0.5
+                },
+                {
+                    "title": "Melanzane",
+                    "price": 1.40,
+                    "minimumOrderQuantity": 0.5
+                },
+                {
+                    "title": "Zucchine",
+                    "price": 1.25,
+                    "minimumOrderQuantity": 0.5
+                },
+                {
+                    "title": "Fagiolini",
+                    "price": 1.60,
+                    "minimumOrderQuantity": 0.5
+                },
+                {
+                    "title": "Carciofi",
+                    "price": 2.00,
+                    "minimumOrderQuantity": 0.5
+                }
+            ]
+        },
+        {
+            "id": "vegetable",
+            "products": [
+                {
+                    "title": "Rucola",
+                    "price": 0.70,
+                    "minimumOrderQuantity": 0.5
+                },
+                {
+                    "title": "Carote",
+                    "price": 0.90,
+                    "minimumOrderQuantity": 0.5
+                },
+                {
+                    "title": "Invidia",
+                    "price": 0.80,
+                    "minimumOrderQuantity": 0.5
+                },
+                {
+                    "title": "Patate",
+                    "price": 1.50,
+                    "minimumOrderQuantity": 0.5
+                },
+                {
+                    "title": "Sedano",
+                    "price": 0.50,
+                    "minimumOrderQuantity": 0.5
+                },
+                {
+                    "title": "Pomodori",
+                    "price": 1.50,
+                    "minimumOrderQuantity": 0.5
+                },
+                {
+                    "title": "Patate Zuccherine",
+                    "price": 1.80,
+                    "minimumOrderQuantity": 0.5
+                }
+            ]
+        }
+    ],
+    "ordini": [
+        {
+            "id": "0010",
+            "products": [
+                {
+                    "title": "Broccoli",
+                    "price": 1.50,
+                    "kg": 1,
+                    "minimumOrderQuantity": 0.5
+                },
+                {
+                    "title": "Biete",
+                    "price": 1.10,
+                    "kg": 2,
+                    "minimumOrderQuantity": 0.5
+                },
+                {
+                    "title": "Spinaci",
+                    "price": 1.25,
+                    "kg": 3,
+                    "minimumOrderQuantity": 0.5
+                },
+                {
+                    "title": "Pomodori",
+                    "price": 1.50,
+                    "kg": 1,
+                    "minimumOrderQuantity": 0.5
+                },
+                {
+                    "title": "Patate",
+                    "price": 1.50,
+                    "kg": 2,
+                    "minimumOrderQuantity": 0.5
+                },
+                {
+                    "title": "Carote",
+                    "price": 0.90,
+                    "kg": 3,
+                    "minimumOrderQuantity": 0.5
+                }
+            ]
+        },
+        {
+            "id": "0020",
+            "products": [
+                {
+                    "title": "Fagiolini",
+                    "price": 1.60,
+                    "kg": 2,
+                    "minimumOrderQuantity": 0.5
+                },
+                {
+                    "title": "Carciofi",
+                    "price": 2.00,
+                    "kg": 2,
+                    "minimumOrderQuantity": 0.5
+                },
+                {
+                    "title": "Zucchine",
+                    "price": 1.25,
+                    "kg": 2,
+                    "minimumOrderQuantity": 0.5
+                },
+                {
+                    "title": "Banane",
+                    "price": 1.10,
+                    "kg": 2,
+                    "minimumOrderQuantity": 0.5
+                },
+                {
+                    "title": "Fragole",
+                    "price": 2.00,
+                    "kg": 2,
+                    "minimumOrderQuantity": 0.5
+                },
+                {
+                    "title": "Mele Verdi",
+                    "price": 1.00,
+                    "kg": 2,
+                    "minimumOrderQuantity": 0.5
+                }
+            ]
+        },
+        {
+            "id": "0030",
+            "products": [
+                {
+                    "title": "Mele Rosse",
+                    "price": 0.90,
+                    "kg": 0.5,
+                    "minimumOrderQuantity": 0.5
+                },
+                {
+                    "title": "Kiwi",
+                    "price": 1.50,
+                    "kg": 0.5,
+                    "minimumOrderQuantity": 0.5
+                },
+                {
+                    "title": "Zucchine",
+                    "price": 1.25,
+                    "kg": 2,
+                    "minimumOrderQuantity": 0.5
+                },
+                {
+                    "title": "Broccoli",
+                    "price": 1.50,
+                    "kg": 1,
+                    "minimumOrderQuantity": 0.5
+                },
+                {
+                    "title": "Spinaci",
+                    "price": 1.25,
+                    "kg": 1,
+                    "minimumOrderQuantity": 0.5
+                },
+                {
+                    "title": "Rucola",
+                    "price": 0.70,
+                    "kg": 0.5,
+                    "minimumOrderQuantity": 0.5
+                }
+            ]
+        }
+    ],
+    "login": {
+        "isLogged": true
+    },
+    "utente": [
+        {
+            "username": "Ale_Dep",
+            "nome": "Alessandro",
+            "cognome": "De Pandis",
+            "codice_fiscale": "DPNLSN85L03E506P",
+            "luogo_di_nascita": "Lecce",
+            "provincia_di_nascita": "Lecce",
+            "data_di_nascita": "03/07/1985",
+            "email": "alessandro.depandis@linksmt.it",
+            "telefono_cellulare": "3496754010",
+            "indirizzo_di_residenza": "Via Ada Cudazzo n. 55",
+            "indirizzo_di_spedizione": "Via Ada Cudazzo n. 55",
+            "carta_di_pagamento": "0123 4567 8910 1112"
+
+        }
+    ]
+
+}

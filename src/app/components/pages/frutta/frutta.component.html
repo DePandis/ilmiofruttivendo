@@ -1,0 +1,105 @@
+<img src="assets/media/images/frutta_verdura_ortaggi-of-seasons.jpg" alt=""
+  style="float: right; margin-top: 70px; margin-right: 170px;" mar height="340"/>
+<div class="container">
+  <div class="row">
+    <div class="col-6 py-5">
+      <div class="link-list-wrapper">
+        <ul class="link-list px-5" #formFrutta>
+          <li>
+            <div class="form-check form-check-group" aria-describedby="">
+              <input type="checkbox" id="checkbox06" value="Mele Rosse">
+              <label for="checkbox06">Mele Rosse</label>
+            </div>
+            <div>
+              <label for="inputNumber" class="input-number-label">grammi</label>
+              <span class="input-number">
+                <input type="number" data-bs-input id="input-number" name="input-number" step="0.5" value="0.5"
+                  min="0.00">
+              </span>
+            </div>
+          </li>
+          <li>
+            <div class="form-check form-check-group" aria-describedby="">
+              <input type="checkbox" id="checkbox07" value="Mele Gialle">
+              <label for="checkbox07">Mele Gialle</label>
+            </div>
+            <div>
+              <label for="inputNumber" class="input-number-label">grammi</label>
+              <span class="input-number">
+                <input type="number" data-bs-input id="input-number" name="input-number" step="0.5" value="0.00"
+                  min="0.00">
+              </span>
+            </div>
+          </li>
+          <li>
+            <div class="form-check form-check-group" aria-describedby="">
+              <input type="checkbox" id="checkbox08" value="Mele Verdi">
+              <label for="checkbox8">Mele Verdi</label>
+            </div>
+            <div>
+              <label for="inputNumber" class="input-number-label">grammi</label>
+              <span class="input-number">
+                <input type="number" data-bs-input id="input-number" name="input-number" step="0.5" value="0.00"
+                  min="0.00">
+              </span>
+            </div>
+          </li>
+          <li>
+            <div class="form-check form-check-group disabled" aria-describedby="">
+              <input type="checkbox" id="checkbox09" disabled value="Banane">
+              <label for="checkbox9">Banane</label>
+            </div>
+            <div>
+              <label for="inputNumber" class="input-number-label">grammi</label>
+              <span class="input-number">
+                <input type="number" data-bs-input id="input-number" name="input-number" step="0.5" value="0.00"
+                  min="0.00" disabled>
+              </span>
+            </div>
+          </li>
+          <li>
+            <div class="form-check form-check-group" aria-describedby="">
+              <input type="checkbox" id="checkbox10" value="Kiwi">
+              <label for="checkbox10">Kiwi</label>
+            </div>
+            <div>
+              <label for="inputNumber" class="input-number-label">grammi</label>
+              <span class="input-number">
+                <input type="number" data-bs-input id="input-number" name="input-number" step="0.5" value="0.5"
+                  min="0.00">
+              </span>
+            </div>
+          </li>
+          <li>
+            <div class="form-check form-check-group" aria-describedby="">
+              <input type="checkbox" id="checkbox11" value="Fragole">
+              <label for="checkbox11">Fragole</label>
+            </div>
+            <div>
+              <label for="inputNumber" class="input-number-label">grammi</label>
+              <span class="input-number">
+                <input type="number" data-bs-input id="input-number" name="input-number" step="0.5" value="0.00"
+                  min="0.00">
+              </span>
+            </div>
+          </li>
+          <li>
+            <div class="form-check form-check-group" aria-describedby="">
+              <input type="checkbox" id="checkbox12" value="Pere">
+              <label for="checkbox12">Pere</label>
+            </div>
+            <div>
+              <label for="inputNumber" class="input-number-label">grammi</label>
+              <span class="input-number">
+                <input type="number" data-bs-input id="input-number" name="input-number" step="0.5" value="0.00"
+                  min="0.00">
+              </span>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <hr class="my-3" />
+      <app-aggiungi-al-carrello tipo="vegetables" [form]="formFrutta"></app-aggiungi-al-carrello>
+    </div>
+  </div>
+</div>

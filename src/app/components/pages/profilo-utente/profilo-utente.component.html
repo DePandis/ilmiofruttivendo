@@ -1,0 +1,84 @@
+<section>
+    <div class="container justify-content-center">
+        <div class="row">
+            <div class="col-12 col-md-4 col-xl-4 py-3">
+                <div (mouseleave)="salvataggioOK = false" class="text-center py-3 lightgrey-bg-c2">
+                    <h5>Foto del Profilo</h5>
+                    <div>Carica la foto in formato jpg, jpeg o png.</div>
+                    <div>Dimensione: 200x200 px, 72 dpi, max 2 mb.</div>
+                    <div class="avatar-wrapper my-3">
+                        <div class="avatar size-xxl">
+                            <img width="170"
+                                src="assets/media/images/immagine-del-profilo-utente-di-sesso-maschile_318-37825.jpg"
+                                alt="Alessandro De Pandis">
+                        </div>
+                        <input type="file" #fileInput style="display: none" accept="image/*" (change)="onFileSelected($event)">
+                    </div>
+                    <div>
+                        <button type="button" class="btn btn-outline-success" (click)="fileInput.click()">Aggiorna Foto</button>
+                        <button (click)="salvataggioOK = true" class="btn btn-success">Salva</button>
+                    </div>
+                    <div *ngIf="salvataggioOK">Caricamento foto avvenuto con successo!</div>
+                    <p>" Vuoi aggiornare i Dati del tuo Profilo? "
+                        <a (click)="salvaDati()" href="javascript:void(0)">
+                            <span class="font-weight-semibold">Clicca QUI</span>
+                        </a>
+                    </p>
+                    <div *ngIf="salvataggioDatiOK">Aggiornamento dati avvenuto con successo!</div>
+                </div>
+            </div>
+            <div class="col-12 col-md- col-xl-5 py-5">
+                <h3 class="primary-color">Dati dell'Utente</h3>
+                <ul class="list-unstyled">
+                    <li>
+                        <label for="Username">Username:</label>
+                        {{user.username}}
+                    </li>
+                    <li>
+                        <label for="Nome">Nome:</label>
+                        {{user.nome}}
+                    </li>
+                    <li>
+                        <label for="Cognome">Cognome:</label>
+                        {{user.cognome}}
+                    </li>
+                    <li>
+                        <label for="Codice Fiscale">Codice Fiscale:</label>
+                        {{user.codice_fiscale}}
+                    </li>
+                    <li>
+                        <label for="Luogo di Nascita">Luogo di Nascita:</label>
+                        {{user.luogo_di_nascita}}
+                    </li>
+                    <li>
+                        <label for="Provincia di Nascita">Provincia di Nascita:</label>
+                        {{user.provincia_di_nascita}}
+                    </li>
+                    <li>
+                        <label for="Data di Nascita">Data di Nascita:</label>
+                        {{user.data_di_nascita}}
+                    </li>
+                    <li>
+                        <label for="E-mail">E-mail:</label>
+                        {{user.email}}
+                    <li>
+                        <label for="Telefono/Cellulare">Telefono/Cellulare:</label>
+                        {{user.telefono_cellulare}}
+                    </li>
+                    <li>
+                        <label for="Indirizzo di Residenza">Indirizzo di Residenza:</label>
+                        {{user.indirizzo_di_residenza}}
+                    </li>
+                    <li>
+                        <label for="Indirizzo di Spedizione">Indirizzo di Spedizione:</label>
+                        {{user.indirizzo_di_spedizione}}
+                    </li>
+                    <li>
+                        <label for="Carta di Pagamento">Carta di Pagamento</label>
+                        {{user.carta_di_pagamento}}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

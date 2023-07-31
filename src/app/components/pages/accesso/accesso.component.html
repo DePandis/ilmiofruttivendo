@@ -1,0 +1,43 @@
+<form (submit)="proceduraAccesso($event);$event.preventDefault();">
+  <div class="container col-4 p-3">
+    <div class="row">
+      <div class="form-outline mb-4">
+        <input type="email" id="registerEmail" class="form-control" placeholder="Email" required minlength="11">
+        <div class="invalid-feedback">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">Inserisci un indirizzo email valido.</font>
+          </font>
+        </div>
+      </div>
+      <div class="form-outline mb-4">
+        <input type="password" id="registerPassword" class="form-control" placeholder="Password" required minlength="8">
+        <div class="invalid-feedback">
+          <font style="vertical-align: inherit;">
+            <font style="vertical-align: inherit;">La tua password deve essere lunga 8-20 caratteri, contenere lettere e
+              numeri e non deve contenere spazi, caratteri speciali o emoji.</font>
+          </font>
+        </div>
+      </div>
+      <div class="row mb-4">
+        <div class="col d-flex justify-content-center">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="form2Example31" />
+            <label class="form-check-label" for="form2Example31"> Ricordati di me </label>
+          </div>
+        </div>
+        <div class="col">
+          <a href="reimposta_password">Ha dimenticato la password?</a>
+        </div>
+      </div>
+      <button class="btn btn-success btn-block mb-4" type="submit">Entra</button>
+      <div class="text-center">
+        <p>Non hai un account? <a href="registrazione">Registrati</a></p>
+        <p>oppure iscriviti con:</p>
+        <a href="https://it-it.facebook.com/" class="me-4"><fa-icon [icon]="faFacebookF"></fa-icon></a>
+        <a href="https://www.google.com/intl/it/account/about/"><fa-icon [icon]="faGoogle"></fa-icon></a>
+        <a href="https://twitter.com/i/flow/login?redirect_after_login=%2F%3Flang%3Dit" class="ms-4"><fa-icon
+            [icon]="faTwitter"></fa-icon></a>
+      </div>
+    </div>
+  </div>
+</form>
