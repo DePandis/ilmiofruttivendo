@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { CommonService } from 'src/app/services/common.service';
 
 @Component({
   selector: 'app-pagina-pagamento',
@@ -9,7 +10,7 @@ import { Router } from '@angular/router';
 export class PaginaPagamentoComponent {
   proceduraPagamentoCompleta = false;
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private route: ActivatedRoute, private servizio: CommonService) {
     const forms = document.querySelectorAll('.needs-validation')
 
     // Loop over them and prevent submission
@@ -42,6 +43,12 @@ export class PaginaPagamentoComponent {
       }
     }
     myForm.classList.add('was-validated')
+  }
+  ordineId: any= '';
+  datiOrdine: any ={};
+
+  ngOnInit() {
+    this.datiOrdine = this.servizio.getCarrello();
   }
 
 }

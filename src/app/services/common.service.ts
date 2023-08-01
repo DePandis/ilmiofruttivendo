@@ -73,6 +73,10 @@ export class CommonService {
         // aggiorniamo il totale
         ordine.totale += prezzoTotale;
       }
+      const sconto = ordine.totale * 0.3;
+      ordine.totale -= sconto;
+
+      ordine.sconto = ( ordine.totale * 30 / 100)
       ordine.iva = ( ordine.totale * 4 / 100 ).toFixed(2);
       ordine.totale = ordine.totale.toFixed(2)
       return ordine;

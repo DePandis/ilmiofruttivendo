@@ -31,4 +31,7 @@ export class CarrelloComponent {
   onpagamentoClick() {
     this.router.navigateByUrl('pagina-pagamento');
   }
+  svuotaCarrello() {
+    this.datiOrdine = {};
+  }
 }

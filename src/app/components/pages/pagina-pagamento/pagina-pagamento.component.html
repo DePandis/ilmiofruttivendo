@@ -19,147 +19,84 @@
                     </span>
                     <span class="badge bg-success rounded-pill">
                         <font style="vertical-align: inherit;">
-                            <font style="vertical-align: inherit;">6</font>
+                            <font style="vertical-align: inherit;">{{ datiOrdine.products ? datiOrdine.products.length :
+                                0 }}</font>
                         </font>
                     </span>
                 </h4>
                 <ul class="list-group mb-3">
-                    <li class="list-group-item d-flex justify-content-between lh-sm">
+                    <li class="list-group-item d-flex justify-content-between lh-sm" *ngFor="let prodotto of datiOrdine.products">
                         <div>
                             <h6 class="my-0">
                                 <font style="vertical-align: inherit;">
-                                    <font style="vertical-align: inherit;">Mele Rosse</font>
+                                    <font style="vertical-align: inherit;">{{ prodotto.title}}</font>
                                 </font>
                             </h6>
                             <small class="text-body-secondary">
                                 <font style="vertical-align: inherit;">
-                                    <font style="vertical-align: inherit;">Kg 0,5</font>
+                                    <font style="vertical-align: inherit;">Kg {{ prodotto.kg }}</font>
                                 </font>
                             </small>
                         </div>
                         <span class="text-body-secondary">
                             <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">€ 0.90</font>
+                                <font style="vertical-align: inherit;">€ {{ prodotto.prezzoTotale}}</font>
                             </font>
                         </span>
-                    <li class="list-group-item d-flex justify-content-between lh-sm">
-                        <div>
-                            <h6 class="my-0">
+                        <li class="list-group-item d-flex justify-content-between bg-body-tertiary">
+                            <div class="text-success">
+                                <h6 class="my-0">
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">IVA</font>
+                                    </font>
+                                </h6>
+                                <small>
+                                    <font style="vertical-align: inherit;">
+                                        <font style="vertical-align: inherit;">(Prodotti agricoli 4%)</font>
+                                    </font>
+                                </small>
+                            </div>
+                            <span class="text-success">
                                 <font style="vertical-align: inherit;">
-                                    <font style="vertical-align: inherit;">Kiwi</font>
+                                    <font style="vertical-align: inherit;">€ {{ datiOrdine.iva }}</font>
                                 </font>
-                            </h6>
-                            <small class="text-body-secondary">
-                                <font style="vertical-align: inherit;">
-                                    <font style="vertical-align: inherit;">Kg 0,5</font>
-                                </font>
-                            </small>
-                        </div>
-                        <span class="text-body-secondary">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">€ 1.50</font>
-                            </font>
-                        </span>
-                    <li class="list-group-item d-flex justify-content-between lh-sm">
-                        <div>
-                            <h6 class="my-0">
-                                <font style="vertical-align: inherit;">
-                                    <font style="vertical-align: inherit;">Zucchine</font>
-                                </font>
-                            </h6>
-                            <small class="text-body-secondary">
-                                <font style="vertical-align: inherit;">
-                                    <font style="vertical-align: inherit;">Kg 2</font>
-                                </font>
-                            </small>
-                        </div>
-                        <span class="text-body-secondary">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">€ 5.00</font>
-                            </font>
-                        </span>
-                    <li class="list-group-item d-flex justify-content-between lh-sm">
-                        <div>
-                            <h6 class="my-0">
-                                <font style="vertical-align: inherit;">
-                                    <font style="vertical-align: inherit;">Broccoli</font>
-                                </font>
-                            </h6>
-                            <small class="text-body-secondary">
-                                <font style="vertical-align: inherit;">
-                                    <font style="vertical-align: inherit;">Kg 1</font>
-                                </font>
-                            </small>
-                        </div>
-                        <span class="text-body-secondary">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">€ 3.00</font>
-                            </font>
-                        </span>
-                    <li class="list-group-item d-flex justify-content-between lh-sm">
-                        <div>
-                            <h6 class="my-0">
-                                <font style="vertical-align: inherit;">
-                                    <font style="vertical-align: inherit;">Spinaci</font>
-                                </font>
-                            </h6>
-                            <small class="text-body-secondary">
-                                <font style="vertical-align: inherit;">
-                                    <font style="vertical-align: inherit;">Kg 1</font>
-                                </font>
-                            </small>
-                        </div>
-                        <span class="text-body-secondary">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">€ 2.50</font>
-                            </font>
-                        </span>
-                    <li class="list-group-item d-flex justify-content-between lh-sm">
-                        <div>
-                            <h6 class="my-0">
-                                <font style="vertical-align: inherit;">
-                                    <font style="vertical-align: inherit;">Rucola</font>
-                                </font>
-                            </h6>
-                            <small class="text-body-secondary">
-                                <font style="vertical-align: inherit;">
-                                    <font style="vertical-align: inherit;">Kg 0,5</font>
-                                </font>
-                            </small>
-                        </div>
-                        <span class="text-body-secondary">
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">€ 0.70</font>
-                            </font>
-                        </span>
+                            </span>
+                        </li>
                     <li class="list-group-item d-flex justify-content-between bg-body-tertiary">
                         <div class="text-success">
                             <h6 class="my-0">
                                 <font style="vertical-align: inherit;">
-                                    <font style="vertical-align: inherit;">Sconto Promozionale (37%)</font>
+                                    <font style="vertical-align: inherit;">Sconto Promozionale</font>
                                 </font>
                             </h6>
                             <small>
                                 <font style="vertical-align: inherit;">
-                                    <font style="vertical-align: inherit;">3° ORDINE NEL MESE CORRENTE</font>
+                                    <font style="vertical-align: inherit;">(30%) UNA TANTUM</font>
                                 </font>
                             </small>
                         </div>
                         <span class="text-success">
                             <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">€ -5.00</font>
+                                <font style="vertical-align: inherit;">€ {{ datiOrdine.sconto }}</font>
                             </font>
                         </span>
                     </li>
                     <li class="list-group-item d-flex justify-content-between">
                         <span>
-                            <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">Totale (€)</font>
-                            </font>
+                            <h5 class="my-0">
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">Totale da Pagare</font>
+                                </font>
+                            </h5>
+                            <small>
+                                <font style="vertical-align: inherit;">
+                                    <font style="vertical-align: inherit;">(IVA inclusa)</font>
+                                </font>
+                            </small>
                         </span>
                         <strong>
                             <font style="vertical-align: inherit;">
-                                <font style="vertical-align: inherit;">€ 8.60</font>
+                                <font style="vertical-align: inherit;">€ {{ datiOrdine.totale }}</font>
                             </font>
                         </strong>
                     </li>
