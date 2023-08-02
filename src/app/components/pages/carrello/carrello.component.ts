@@ -15,8 +15,8 @@ export class CarrelloComponent {
   ) {
 
   }
-  ordineId: any= '';
-  datiOrdine: any ={};
+  ordineId: any = '';
+  datiOrdine: any = {};
 
   ngOnInit() {
     this.datiOrdine = this.servizio.getCarrello();
@@ -33,5 +33,6 @@ export class CarrelloComponent {
   }
   svuotaCarrello() {
     this.datiOrdine = {};
+    this.servizio.carrello = []
   }
 }

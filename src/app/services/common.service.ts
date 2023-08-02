@@ -30,22 +30,22 @@ export class CommonService {
     const url = '/api/products';
     return this.http.get<any[]>(url);
   }
-  aggiungialcarrello(ordine:any) {
-    ordine.forEach((o:any) => this.carrello.push(o));
-//    this.carrello.push(ordine);
+  aggiungialcarrello(ordine: any) {
+    ordine.forEach((o: any) => this.carrello.push(o));
+    //    this.carrello.push(ordine);
   }
   getCarrello() {
-    return this.calcolaOrdine({products: this.carrello});
+    return this.calcolaOrdine({ products: this.carrello });
   }
   inserisciOrdine(ordine: any) {
     this.carrello.push(ordine);
   }
   eliminaOrdine(prodotto: any) {
     const posizioneProdotto = this.carrello.indexOf(prodotto);
-    if (posizioneProdotto>-1) {
+    if (posizioneProdotto > -1) {
       this.carrello.splice(posizioneProdotto, 1);
-      } 
-      }
+    }
+  }
 
   getOrdine(id: string) {
     const url = '/api/ordini/' + id;
@@ -60,26 +60,26 @@ export class CommonService {
 
 
   private calcolaOrdine(ordine: any) {
-      ordine.totale = 0;
-      for(let i = 0; i < ordine.products.length; i++) {
-        const prodotto = ordine.products[i];
-        const kg =  prodotto.kg ? prodotto.kg : 1;
-        const minimo = prodotto.minimumOrderQuantity ? prodotto.minimumOrderQuantity : 1;
-  
-        // valorizzando il prezzo totale del prodotto i-esimo
-        const prezzoTotale =prodotto.price * kg / minimo;;
-        ordine.products[i].prezzoTotale = prezzoTotale;
-  
-        // aggiorniamo il totale
-        ordine.totale += prezzoTotale;
-      }
-      const sconto = ordine.totale * 0.3;
-      ordine.totale -= sconto;
+    ordine.totale = 0;
+    for (let i = 0; i < ordine.products.length; i++) {
+      const prodotto = ordine.products[i];
+      const kg = prodotto.kg ? prodotto.kg : 1;
+      const minimo = prodotto.minimumOrderQuantity ? prodotto.minimumOrderQuantity : 1;
 
-      ordine.sconto = ( ordine.totale * 30 / 100)
-      ordine.iva = ( ordine.totale * 4 / 100 ).toFixed(2);
-      ordine.totale = ordine.totale.toFixed(2)
-      return ordine;
+      // valorizzando il prezzo totale del prodotto i-esimo
+      const prezzoTotale = prodotto.price * kg / minimo;;
+      ordine.products[i].prezzoTotale = prezzoTotale;
+
+      // aggiorniamo il totale
+      ordine.totale += prezzoTotale;
+    }
+    const sconto = ordine.totale * 0.3;
+    ordine.totale -= sconto;
+
+    ordine.sconto = (ordine.totale * 30 / 100).toFixed(2)
+    ordine.iva = (ordine.totale * 4 / 100).toFixed(2);
+    ordine.totale = ordine.totale.toFixed(2)
+    return ordine;
   }
 
   getOrdineCalcolato(id: string) {

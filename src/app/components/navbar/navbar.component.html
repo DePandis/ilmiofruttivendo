@@ -1,4 +1,4 @@
-<div container-fluid class="bg-success p-2 text-white">
+<div container-fluid class="bg-success p-2 text-white no-print">
     <div class="row text-center">
         <div class="col-3">
             <img width="170" height="100" src="assets/media/images/Banner.jpg" alt="Healthy">
@@ -39,7 +39,8 @@
                 </ul>
                 <div class="text-center p-3">
                     <a href="https://api.whatsapp.com/send?phone=3496754010&text=Salve%20vorrei%20inviare%20un%20messaggio%20"
-                        *ngIf="isLogged" class="btn btn-success me-4 justify-content-center">Ordina Ora con WhatsApp!</a>
+                        *ngIf="isLogged" class="btn btn-success me-4 justify-content-center">Ordina Ora con
+                        WhatsApp!</a>
                 </div>
                 <form class="col-12 col-lg-auto mb-0 me-lg-2" role="search">
                     <input (keydown)="onKeydown($event)" type="search" class="form-control form-control text-bg"

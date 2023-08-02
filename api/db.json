@@ -25,7 +25,7 @@
                 },
                 {
                     "title": "Kiwi",
-                    "price": "€ 1,50",
+                    "price": 1.50,
                     "minimumOrderQuantity": 0.5
                 },
                 {
@@ -36,6 +36,51 @@
                 {
                     "title": "Pere",
                     "price": 0.90,
+                    "minimumOrderQuantity": 0.5
+                },
+                {
+                    "title": "Anguria",
+                    "price": 1.50,
+                    "minimumOrderQuantity": 0.5
+                },
+                {
+                    "title": "Melone",
+                    "price": 1.30,
+                    "minimumOrderQuantity": 0.5
+                },
+                {
+                    "title": "Ciliege",
+                    "price": 2.00,
+                    "minimumOrderQuantity": 0.5
+                },
+                {
+                    "title": "Albicocche",
+                    "price": 1.10,
+                    "minimumOrderQuantity": 0.5
+                },
+                {
+                    "title": "Fichi",
+                    "price": 1.20,
+                    "minimumOrderQuantity": 0.5
+                },
+                {
+                    "title": "Lamponi",
+                    "price": 1.40,
+                    "minimumOrderQuantity": 0.5
+                },
+                {
+                    "title": "Mirtilli",
+                    "price": 1.20,
+                    "minimumOrderQuantity": 0.5
+                },
+                {
+                    "title": "Pesche",
+                    "price": 1.70,
+                    "minimumOrderQuantity": 0.5
+                },
+                {
+                    "title": "Susine",
+                    "price": 1.80,
                     "minimumOrderQuantity": 0.5
                 }
             ]
@@ -77,6 +122,26 @@
                     "title": "Carciofi",
                     "price": 2.00,
                     "minimumOrderQuantity": 0.5
+                },
+                {
+                    "title": "Cavoli",
+                    "price": 1.50,
+                    "minimumOrderQuantity": 0.5
+                },
+                {
+                    "title": "Cicoria",
+                    "price": 1.80,
+                    "minimumOrderQuantity": 0.5
+                },
+                {
+                    "title": "Fave",
+                    "price": 1.00,
+                    "minimumOrderQuantity": 0.5
+                },
+                {
+                    "title": "Peperoni",
+                    "price": 2.50,
+                    "minimumOrderQuantity": 0.5
                 }
             ]
         },
@@ -116,6 +181,26 @@
                 {
                     "title": "Patate Zuccherine",
                     "price": 1.80,
+                    "minimumOrderQuantity": 0.5
+                },
+                {
+                    "title": "Cipolle",
+                    "price": 0.80,
+                    "minimumOrderQuantity": 0.5
+                },
+                {
+                    "title": "Cetrioli",
+                    "price": 1.00,
+                    "minimumOrderQuantity": 0.5
+                },
+                {
+                    "title": "Radicchio",
+                    "price": 0.80,
+                    "minimumOrderQuantity": 0.5
+                },
+                {
+                    "title": "Ravanelli",
+                    "price": 1.20,
                     "minimumOrderQuantity": 0.5
                 }
             ]
@@ -263,8 +348,6 @@
             "indirizzo_di_residenza": "Via Ada Cudazzo n. 55",
             "indirizzo_di_spedizione": "Via Ada Cudazzo n. 55",
             "carta_di_pagamento": "0123 4567 8910 1112"
-
         }
     ]
-
 }
