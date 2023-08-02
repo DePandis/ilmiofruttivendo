@@ -48,7 +48,7 @@ export class PaginaPagamentoComponent {
   datiOrdine: any ={};
 
   ngOnInit() {
-    this.datiOrdine = this.servizio.getCarrello();
+    this.datiOrdine = this.servizio.getCarrello(true);
   }
 
 }

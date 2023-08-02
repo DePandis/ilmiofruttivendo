@@ -16,7 +16,7 @@ export class AvvenutoPagamentoComponent {
   datiOrdine: any = {};
 
   ngOnInit() {
-    this.datiOrdine = this.servizio.getCarrello();
+    this.datiOrdine = this.servizio.getCarrello(true);
   }
   dataOggi = formatDate(new Date(), 'dd/MM/yyyy', "en-US");
 }
